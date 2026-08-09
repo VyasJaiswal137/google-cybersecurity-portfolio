@@ -1,5 +1,4 @@
-# Google-Cybersecurity-Portfolio
-# Vyas Jaiswal | Cybersecurity Portfolio
+# Vyas Jaiswal | Google-Cybersecurity-Portfolio
 
 Welcome to my cybersecurity portfolio! I am currently completing the **Google Cybersecurity Professional Certificate** to build practical skills in risk management, threat detection, system administration, and security analytics.
 
