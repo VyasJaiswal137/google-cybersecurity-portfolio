@@ -1,7 +1,11 @@
 # Course 1: Foundations of Cybersecurity
 
+<p align="center">
+  <img src="./course-1-certificate.png" alt="Google Cybersecurity Course 1 Certificate" width="700">
+</p>
+
 ## Executive Overview
-This document summarizes the foundational concepts, threat models, and enterprise security frameworks mastered in Course 1 of the Google Cybersecurity Professional Certificate.
+This document summarizes the foundational concepts, threat models, core security tools, and enterprise frameworks mastered in Course 1 of the Google Cybersecurity Professional Certificate.
 
 ---
 
@@ -22,5 +26,11 @@ This document summarizes the foundational concepts, threat models, and enterpris
 * **Software Development Security:** Integrating security across each phase of the Software Development Lifecycle (SDLC).
 
 ### 3. Frameworks & Core Principles
-* **CIA Triad:** Safeguarding Confidentiality, Integrity, and Availability.
-* **Security Posture:** An organization's ability to react to change and manage the defense of critical assets.
+* **CIA Triad:** Safeguarding Confidentiality, Integrity, and Availability across systems.
+* **Security Posture:** An organization's ability to react to change and manage the defense of critical assets and data.
+* **NIST Frameworks:** Applying structured risk management guidelines to lower organizational vulnerability.
+
+### 4. Essential Security Analyst Tools
+* **SIEM Tools:** Centralized software used to aggregate logs, monitor events, and identify potential threats.
+* **Network Protocol Analyzers:** Tools used to capture and inspect network packet data.
+* **SQL & Python:** Foundational tools used by analysts to query database logs and automate basic security workflows.
