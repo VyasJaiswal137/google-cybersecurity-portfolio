@@ -58,7 +58,7 @@ Different attack types fall under specific CISSP security domains:
 
 | Attack Category | What It Means | Associated CISSP Domain |
 | :--- | :--- | :--- |
-| **Password Attack** | Trying to guess or break passwords (e.g., Brute force, Rainbow table). | Communication & Network Security |
+| **Password Attack** | Trying to guess or break passwords (e.g., Brute force, Rainbow table). | Communication & Network Security **AND** Identity and Access Management (IAM) |
 | **Social Engineering** | Tricking people into sharing data or access (e.g., Phishing, Smishing, USB baiting). | Security & Risk Management |
 | **Physical Attack** | Targeting physical items or hardware (e.g., malicious USB cables, card skimmers). | Asset Security |
 | **Adversarial AI** | Manipulating artificial intelligence or machine learning systems to conduct attacks. | Communication & Network Security **AND** Identity & Access Management (IAM) |
