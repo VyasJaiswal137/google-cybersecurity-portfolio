@@ -1,26 +1,29 @@
-# Vyas Jaiswal | Google-Cybersecurity-Portfolio
+# Vyas Jaiswal | Cybersecurity Portfolio
 
 > **Professional Summary**
-> 
-> Because of my long-standing enthusiasm for solving analytical puzzles and carrying out reverse engineering, I apply a detective-like approach to cybersecurity—linking together digital clues in order to identify the underlying causes and resolve complicated security issues. The fact that I had an early interest in setting up web environments caused me to understand just how important it is to protect assets in modern applications. I am good at taking apart processes in order to grasp how systems function, fail, and defend themselves. I am currently studying the main security tools as part of the Google Cybersecurity Professional Certificate, and my aim is to protect vital digital infrastructure so that organizations and users can operate with full trust and peace of mind.
-Welcome to my cybersecurity portfolio! I am currently completing the **Google Cybersecurity Professional Certificate** to build practical skills in risk management, threat detection,security analyst,system administration, and security analytics.
+> Driven by a lifelong passion for analytical puzzle-solving and reverse engineering, I approach cybersecurity with a detective's mindset—connecting digital clues to uncover root causes and solve complex security problems. My early curiosity with building web environments made me realize how critical asset protection is in modern applications. I excel at deconstructing processes to understand how systems operate, fail, and defend themselves. Currently mastering core security tools through the Google Cybersecurity Professional Certificate, my goal is to protect critical digital infrastructure so organizations and users can operate with complete trust and peace of mind.
 
 ---
 
-## Certifications & Progress
+## 📬 Connect with Me
+* **LinkedIn:** [www.linkedin.com/in/vyas-jaiswal-036873422]
+* **Email:** [vyasjaiswalc7@gmail.com]
+
+---
+
+## 🛡️ Certifications & Learning Progress
 * **Google Cybersecurity Professional Certificate** (Coursera)
-  * **Course 1: Foundations of Cybersecurity** — Completed
-  * **Course 2: Play It Safe: Manage Security Risks** — In Progress ⏳
+  * **Course 1: Foundations of Cybersecurity** — Completed ([View Summary](./01-foundations/foundations-summary.md))
+  * **Course 2: Play It Safe: Manage Security Risks** — Completed ([View Summary & Project](./02-risk-management/course-2-summary.md))
+  * **Course 3: Connect and Protect: Networks and Network Security** — In Progress ⏳
 
 ---
 
-## Core Competencies Mastered (Course 1)
-* **Threat Landscape:** Historical evolution of cyber attacks, threat actor profiles, and modern attack vectors.
-* **Security Frameworks:** The CIA Triad, introduction to NIST CSF, and ethical security practices.
-* **Enterprise Security Domains:** Understanding the 8 CISSP Security Domains and organizational security posture.
+## 📂 Portfolio Projects & Notes
 
----
-
-## Portfolio Projects & Notes
 * **[Course 1: Foundations & Security Domains Overview](./01-foundations/foundations-summary.md)**
-  * A structured breakdown of the 8 CISSP domains, threat landscape evolution, and core security frameworks learned in Course 1.
+  * A structured breakdown of the 8 CISSP domains, threat landscape evolution, core security frameworks (CIA Triad, NIST), and foundational analyst tools.
+
+* **[Course 2: Play It Safe — Manage Security Risks](./02-risk-management/course-2-summary.md)**
+  * Comprehensive overview of risk management frameworks (NIST CSF & RMF), security control classifications, regulatory compliance (PCI DSS, GDPR, SOC 1/2), and SIEM log analysis.
+  * **Featured Project:** **[Botium Toys Internal Security Audit](./02-risk-management/botium-toys-security-audit.md)** — Performed a full risk assessment for a retail enterprise, completing controls/compliance checklists and providing strategic remediation recommendations to lower organizational risk.
