@@ -38,6 +38,6 @@ This document summarizes the frameworks, control classifications, regulatory com
 ---
 
 ## Portfolio Deliverable & Applied Project
-* **[Botium Toys Security Audit Report](./botium-toys-security-audit.md)**
+* **[Botium Toys Security Audit Report](./02-risk-management/Course-2-Projects/botium-toys-security-audit.md)**
   * *Project Scope:* Completed a comprehensive internal security audit and risk evaluation for a fictional retail enterprise.
   * *Artifacts Created:* Completed Controls Checklist, Regulatory Compliance Checklist (PCI DSS, GDPR, SOC 1/2), and a prioritized executive remediation strategy.
