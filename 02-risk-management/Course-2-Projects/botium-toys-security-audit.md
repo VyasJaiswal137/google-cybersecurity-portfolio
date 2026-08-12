@@ -71,23 +71,23 @@ The IT department has active and enforced privacy policies, processes, and docum
 
 ## Compliance Assessment Checklist
 
-### The Payment Card Industry Data Security Standard (PCI DSS)
-[ ] **Authorized Access Only:** ❌ *Failed* — At present, all employees have access to cardholder data.
-[ ] **Secure Storage/Processing Environment:** ❌ *Failed* — The data is stored locally within an unencrypted internal network.
-[ ] **Data Encryption:** ❌ *Failed* — There are no encryption protocols in operation at any of the points where the data is processed.
-[ ] **Secure Password Policies:** ❌ *Failed* — the requirements for passwords are weak and there is no central management.
+### 1. Payment Card Industry Data Security Standard (PCI DSS)
+- [ ] **Authorized Access Only:** ❌ *Failed* — At present, all employees have access to cardholder data.
+- [ ] **Secure Storage/Processing Environment:** ❌ *Failed* — Data is stored locally within an unencrypted internal network.
+- [ ] **Data Encryption:** ❌ *Failed* — No encryption protocols operate across data processing and transmission touchpoints.
+- [ ] **Secure Password Policies:** ❌ *Failed* — Password requirements are weak and lack centralized management.
 
-### 2. The General Data Protection Regulation (GDPR)
-[ ] **EU customer data privacy:** ❌ *Failed* — unencrypted PII/SPII is accessible throughout the workforce.
-[x] **72-Hour Breach Notification:** ✅ The response protocol has been activated for notifications to E.U. customers.
-[ ] **Data Classification and Inventory:** ❌ *Failed* — the asset management is incomplete and the risk impact has not been mapped.
-[x] **Privacy Policies Enforced:** ✅ *Passed* — The internal privacy procedures have been put into effect by IT.
+### 2. General Data Protection Regulation (GDPR)
+- [ ] **E.U. Customer Data Privacy:** ❌ *Failed* — Unencrypted PII/SPII is accessible throughout the workforce.
+- [x] **72-Hour Breach Notification:** ✅ *Passed* — Response protocol active for notifications to E.U. customers.
+- [ ] **Data Classification and Inventory:** ❌ *Failed* — Asset management is incomplete and risk impact has not been mapped.
+- [x] **Privacy Policies Enforced:** ✅ *Passed* — Internal privacy procedures have been put into effect by IT.
 
-### 3. System and organizational controls (SOC 1 / SOC 2)
-[ ] The user access policies have not been established ❌ (failure) – the principles of least privilege and separation of duties are absent.
-[ ] **Sensitive Data Confidentiality:** ❌ *Failed* — there is no encryption of PII/SPII and there is no role access control.
-* [x] **Data Integrity Ensured:** *Passed.* Integrated controls keep data correct and checked.
-[x] **Data Availability Guaranteed:** ✅ *Completed* — The system's uptime and the availability of its resources are actively managed.
+### 3. System and Organization Controls (SOC 1 / SOC 2)
+- [ ] **User Access Policies Established:** ❌ *Failed* — Principles of least privilege and separation of duties are absent.
+- [ ] **Sensitive Data Confidentiality:** ❌ *Failed* — PII/SPII lacks encryption and role-based access control.
+- [x] **Data Integrity Ensured:** ✅ *Passed* — Integrated controls keep data consistent, validated, and accurate.
+- [x] **Data Availability Ensured:** ✅ *Passed* — System uptime and resource availability are actively managed.
 
 ---
 
