@@ -26,4 +26,4 @@
 
 * **[Course 2: Play It Safe — Manage Security Risks](./02-risk-management/course-2-summary.md)**
   * Comprehensive overview of risk management frameworks (NIST CSF & RMF), security control classifications, regulatory compliance (PCI DSS, GDPR, SOC 1/2), and SIEM log analysis.
-  * **Featured Project:** **[Botium Toys Internal Security Audit](.02-risk-management/Course-2-Projects/botium-toys-security-audit.md)** — Performed a full risk assessment for a retail enterprise, completing controls/compliance checklists and providing strategic remediation recommendations to lower organizational risk.
+  * **Featured Project:** **[Botium Toys Internal Security Audit](./02-risk-management/Course-2-Projects/botium-toys-security-audit.md)** — Performed a full risk assessment for a retail enterprise, completing controls/compliance checklists and providing strategic remediation recommendations to lower organizational risk.
