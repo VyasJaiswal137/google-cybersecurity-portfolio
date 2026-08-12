@@ -14,7 +14,7 @@
 ## 🛡️ Certifications & Learning Progress
 * **Google Cybersecurity Professional Certificate** (Coursera)
   * **Course 1: Foundations of Cybersecurity** — Completed ([View Summary](./01-foundations/foundations-summary.md))
-  * **Course 2: Play It Safe: Manage Security Risks** — Completed ([View Summary & Project](./02-risk-management/course-2-summary.md))
+  * **Course 2: Play It Safe: Manage Security Risks** — Completed ([View Summary & Project](./02-risk-management/Course-2-summary.md))
   * **Course 3: Connect and Protect: Networks and Network Security** — In Progress ⏳
 
 ---
