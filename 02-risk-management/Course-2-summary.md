@@ -1,9 +1,8 @@
 # Course 2: Play It Safe: Manage Security Risks
 
 <p align="center">
-  <img src="./course-2-certificate.png" alt="Google Cybersecurity Course 2 Certificate" width="700">
+  <img src="./Course 2 cert-1.png" alt="Google Cybersecurity Course 2 Certificate" width="700">
 </p>
-
 ## Executive Overview
 This document summarizes the frameworks, control classifications, regulatory compliance mandates, SIEM tools, and security auditing methodologies mastered in Course 2 of the Google Cybersecurity Professional Certificate.
 
