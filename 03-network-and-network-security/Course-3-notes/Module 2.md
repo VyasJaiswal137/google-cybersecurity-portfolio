@@ -1,4 +1,4 @@
-# Course 3 - Module 2
+# Course 3 - Module 2 Study Notes: Network Operations & Protocols
 
 ---
 
