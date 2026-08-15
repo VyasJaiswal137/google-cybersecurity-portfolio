@@ -1,6 +1,6 @@
 # Cybersecurity Incident Report: Network Traffic Analysis
 
-![TCPDUMP Logs](03-network-and-network-security/Course-3-Projects/Project1-Trafic%20Network%20Analysis/TCPDUMP%20logs.png)
+![TCPDUMP Logs](./TCPDUMP%20logs.png)
 
 ---
 
