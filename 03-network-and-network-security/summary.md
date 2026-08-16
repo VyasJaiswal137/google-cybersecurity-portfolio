@@ -1,5 +1,9 @@
 # Course 3 Summary: Connect and Protect — Networks and Network Security
 
+<p align="center">
+  <img src="./Course-3-cert.png" alt="Google Cybersecurity Course 3 Certificate" width="700">
+</p>
+
 This document synthesizes the core concepts, protocols, security vulnerabilities, packet analysis techniques, and network defense strategies covered throughout Course 3 of the Google Cybersecurity Certificate.
 
 ---
