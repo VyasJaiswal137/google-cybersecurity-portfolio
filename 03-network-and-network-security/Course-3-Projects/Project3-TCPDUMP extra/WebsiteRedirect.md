@@ -1,10 +1,8 @@
-# How to Read a tcpdump Traffic Log
+# Cybersecurity Incident Report: Website Compromise & Malware Redirection
 
-This guide explains how to read a `tcpdump` traffic log and use it to analyze network activity related to a security incident.
+## How to Read the tcpdump Traffic Log
 
-## 1. DNS Resolution
-
-The first section of the log shows the computer performing a DNS lookup for `yummyrecipesforme.com`:
+This reading explains how to use tcpdump to analyze the network traffic related to the security incident.
 
 ```text
 14:18:32.192571 IP your.machine.52444 > dns.google.domain: 35084+ A?
@@ -14,21 +12,7 @@ yummyrecipesforme.com. (24)
 1/0/0 A 203.0.113.22 (40)
 ```
 
-The first entry shows the source computer, `your.machine`, using port `52444` to send a DNS query to the DNS server, `dns.google.domain`. The query asks for the IPv4 address (`A` record) associated with `yummyrecipesforme.com`.
-
-The DNS server then responds to the same source port and provides the IP address `203.0.113.22` for the requested domain.
-
-In simple terms:
-
-**Computer → DNS server:** “What is the IP address of `yummyrecipesforme.com`?”
-
-**DNS server → Computer:** “The IP address is `203.0.113.22`.”
-
----
-
-## 2. Establishing a TCP Connection
-
-The next section shows the computer establishing a TCP connection with `yummyrecipesforme.com`:
+The first section of the DNS and HTTP traffic log shows the source computer (`your.machine.52444`) using port `52444` to send a DNS resolution request to the DNS server (`dns.google.domain`) for `yummyrecipesforme.com`. The DNS server then responds with the IP address of the destination URL, `203.0.113.22`.
 
 ```text
 14:18:36.786501 IP your.machine.36086 > yummyrecipesforme.com.http:
@@ -40,37 +24,15 @@ Flags [S.], seq 3984334959, ack 2873951609, win 65483, options [mss
 65495,sackOK,TS val 3302576859 ecr 3302576859,nop,wscale 7], length 0
 ```
 
-The source computer uses the temporary port `36086` to initiate a TCP connection with `yummyrecipesforme.com` on the HTTP service.
+The next section shows the source computer sending a TCP connection request (`Flags [S]`) from port `36086` to `yummyrecipesforme.com.http`. The `.http` suffix identifies HTTP traffic, which commonly uses port `80`. The server replies with `Flags [S.]`, acknowledging the connection request. This is part of the TCP three-way handshake.
 
-The `.http` suffix indicates the destination service is associated with HTTP, which normally uses **TCP port 80**.
+TCP flag codes include:
 
-The first packet contains:
-
-* `Flags [S]` — a **SYN** packet, which starts the TCP connection.
-* `seq` — the initial sequence number used for the connection.
-
-The destination responds with:
-
-* `Flags [S.]` — **SYN + ACK**, meaning it received the connection request and is acknowledging it.
-* `ack` — the acknowledgment number for the received SYN.
-
-Together, these packets are part of the **TCP three-way handshake**, which establishes the connection before data is exchanged.
-
-### Common TCP Flags
-
-| Flag  | Meaning                               |
-| ----- | ------------------------------------- |
-| `[S]` | SYN — starts a TCP connection         |
-| `[.]` | ACK — acknowledges received data      |
-| `[P]` | PSH — pushes data to the application  |
-| `[F]` | FIN — begins closing a TCP connection |
-| `[R]` | RST — resets/aborts a TCP connection  |
-
----
-
-## 3. HTTP GET Request
-
-The following packet shows the computer sending an HTTP request:
+* `Flags [S]` — Connection Start
+* `Flags [.]` — Acknowledgment
+* `Flags [F]` — Connection Finish
+* `Flags [P]` — Data Push
+* `Flags [R]` — Connection Reset
 
 ```text
 14:18:36.786589 IP your.machine.36086 > yummyrecipesforme.com.http:
@@ -78,23 +40,7 @@ Flags [P.], seq 1:74, ack 1, win 512, options [nop,nop,TS val
 3302576859 ecr 3302576859], length 73: HTTP: GET / HTTP/1.1
 ```
 
-The important part is:
-
-```text
-HTTP: GET / HTTP/1.1
-```
-
-This indicates that the computer is requesting the root page (`/`) from `yummyrecipesforme.com` using the HTTP `GET` method and HTTP version `1.1`.
-
-Because this traffic occurs during the security incident, this request is significant. It could represent the browser requesting a webpage or potentially downloading content associated with the incident.
-
-The `[P.]` flag indicates that the packet contains application data and that the data should be pushed to the receiving application. The `.` represents the ACK flag.
-
----
-
-## 4. A New DNS Lookup
-
-Approximately two minutes later, the computer performs another DNS lookup:
+The log entry `HTTP: GET / HTTP/1.1` shows that the browser is requesting the webpage from `yummyrecipesforme.com` using the HTTP `GET` method and HTTP version 1.1. According to the incident investigation, the website then prompts the victim to download a malicious executable.
 
 ```text
 14:20:32.192571 IP your.machine.52444 > dns.google.domain: 21899+ A?
@@ -102,25 +48,7 @@ greatrecipesforme.com. (24)
 
 14:20:32.204388 IP dns.google.domain > your.machine.52444: 21899
 1/0/0 A 192.0.2.172 (40)
-```
 
-This time, the computer asks the DNS server for the IP address of a different domain:
-
-`greatrecipesforme.com`
-
-The DNS server responds with:
-
-`192.0.2.172`
-
-This change in the requested domain is important because it indicates that the computer is now attempting to communicate with a different destination.
-
----
-
-## 5. Connection to the New Website
-
-The log then shows a new TCP connection:
-
-```text
 14:25:29.576493 IP your.machine.56378 > greatrecipesforme.com.http:
 Flags [S], seq 1020702883, win 65495, options [mss 65495,sackOK,TS
 val 3302989649 ecr 0,nop,wscale 7], length 0
@@ -130,36 +58,66 @@ Flags [S.], seq 1993648018, ack 1020702884, win 65483, options [mss
 65495,sackOK,TS val 3302989649 ecr 3302989649,nop,wscale 7], length 0
 ```
 
-The computer establishes a new TCP connection with `greatrecipesforme.com`.
+A sudden change then appears in the logs. The source computer sends another DNS resolution request, this time for `greatrecipesforme.com`. The DNS server responds with the IP address `192.0.2.172`. The traffic then changes to a new HTTP connection between the source computer (`your.machine.56378`) and `greatrecipesforme.com.http`.
 
-Notice that the source port has changed from `36086` to `56378`. This is normal: client applications generally use temporary (ephemeral) source ports for separate TCP connections.
-
-The traffic flow is now:
-
-**Computer → `greatrecipesforme.com`**
-
-and
-
-**`greatrecipesforme.com` → Computer**
-
-The important observation is that the computer has moved from communicating with `yummyrecipesforme.com` to communicating with `greatrecipesforme.com`.
+This indicates that the browser was redirected from the legitimate website to the spoofed or malicious website. The source port also changes from `36086` to `56378` for the new connection.
 
 ---
 
-## 6. What the Traffic Shows
+## Section 1: Identify the Network Protocols Involved
 
-When these entries are viewed together, the sequence of events is:
+* **DNS (Domain Name System):** Resolves `yummyrecipesforme.com` and `greatrecipesforme.com` into their corresponding IP addresses.
+* **TCP (Transmission Control Protocol):** Establishes the connection between the user's computer and the web server using the TCP handshake.
+* **HTTP (Hypertext Transfer Protocol):** Used by the browser to request and receive the webpage over port `80`.
 
-1. The computer performs a DNS lookup for `yummyrecipesforme.com`.
-2. DNS returns `203.0.113.22`.
-3. The computer establishes a TCP connection to the HTTP service.
-4. The computer sends an HTTP `GET` request.
-5. About two minutes later, the computer performs a DNS lookup for `greatrecipesforme.com`.
-6. DNS returns `192.0.2.172`.
-7. The computer establishes a new TCP connection to `greatrecipesforme.com`.
+---
 
-This sequence is important when investigating a security incident because it shows a **change in the destination domain** and a subsequent connection to that new destination.
+## Section 2: Documenting the Incident
 
-The `tcpdump` log therefore provides evidence of the network communication that occurred during the incident, including DNS lookups, TCP connection establishment, and HTTP requests.
+The website was compromised after the attacker gained access to the administrative account through a **brute force attack**. The password was still set to the default password, and no controls were in place to prevent repeated login attempts.
 
-> **Key takeaway:** When reading a `tcpdump` log, focus on the **timestamps, source and destination addresses/ports, DNS lookups, TCP flags, and application-layer requests**. Looking at these elements together helps reconstruct what the computer was communicating with and when.
+After gaining access, the attacker modified the website's source code and inserted malicious JavaScript that prompted visitors to download an executable file disguised as a browser update.
+
+The downloaded file contained a script that redirected the browser to `greatrecipesforme.com`. The tcpdump traffic confirms this behavior by showing a DNS request for the new domain followed by a TCP connection to its web server.
+
+The attacker also changed the administrator password after modifying the website, preventing the legitimate owner from accessing the admin panel.
+
+### Attack Flow
+
+```text
+Brute Force Attack
+        ↓
+Default Password Compromised
+        ↓
+Admin Panel Access
+        ↓
+Malicious JavaScript Added
+        ↓
+Victim Visits Website
+        ↓
+Malicious File Downloaded
+        ↓
+Browser Redirect
+        ↓
+greatrecipesforme.com
+        ↓
+Malware Infection
+```
+
+---
+
+## Section 3: Recommending One Remediation for Brute Force Attacks
+
+The recommended remediation is to implement **account lockout and login rate limiting**.
+
+After a defined number of failed login attempts, the account should be temporarily locked or further attempts should be delayed. This prevents an attacker from repeatedly guessing passwords.
+
+The organization should also remove all default passwords and use strong, unique administrator passwords.
+
+---
+
+## Conclusion
+
+The tcpdump evidence shows the normal DNS, TCP, and HTTP communication with `yummyrecipesforme.com`, followed by a new DNS lookup and HTTP connection to `greatrecipesforme.com`.
+
+This supports the conclusion that the compromised website redirected visitors to a malicious website after the attacker gained administrative access through a brute force attack.
