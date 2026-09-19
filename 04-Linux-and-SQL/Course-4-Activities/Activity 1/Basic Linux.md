@@ -29,10 +29,8 @@ Learn basic output formatting, string output, environment variable expansion, an
 
 - `echo`: Displays text strings or environment variable values to standard output (the terminal screen).
   - Example string display: `echo "Initializing Security Scan..."`
-  - Example variable expansion: `echo $USER` or `echo $SHELL`
 - `expr`: Evaluates expression strings and computes basic integer arithmetic.
   - Example addition: `expr 10 + 5`
-  - Example multiplication: `expr 4 \* 5` (Note: Asterisk `*` is escaped with `\` to prevent shell wildcard expansion)
 
 **Core Takeaways & Security Implications**
 
