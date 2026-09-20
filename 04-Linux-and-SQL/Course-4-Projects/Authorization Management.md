@@ -88,27 +88,34 @@ The final permission group for other users showed that write access had been rem
 
 ## Changing Permissions on a Hidden File
 
-The research team had archived `.project_x.txt`. Since the file was archived, it should not be writable. However, both the owner and group still needed read access.
+The research team had archived `.project_x.txt`. Since the file was archived, it should not be writable. The owner and group should retain read access, while other users should have no access.
 
-I set the permissions directly using:
+I removed write permissions from the owner and group and ensured that the group retained read permission using:
 
 ```bash
-chmod u=r,g=r,o= .project_x.txt
-```
+chmod u-w,g-w,g+r .project_x.txt
+````
 
 This means:
 
-* `u=r` — Owner can read.
-* `g=r` — Group can read.
-* `o=` — Other users receive no permissions.
+* `u-w` — Removes write permission from the owner.
+* `g-w` — Removes write permission from the group.
+* `g+r` — Gives read permission to the group.
 
-I verified the result with:
+I then verified the result with:
 
 ```bash
-ls -la .project_x.txt
+ls -la
 ```
 
-The resulting permission string reflected the required access restrictions.
+The resulting permission string was:
+
+```text
+-r--r-----
+```
+
+This confirmed that the owner and group could read the file, while other users had no permissions.
+
 
 ![Updating permissions of the hidden file](Picture3.png)
 
