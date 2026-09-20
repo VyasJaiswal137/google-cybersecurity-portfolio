@@ -1,5 +1,5 @@
 
-## Activity 1
+# Activity 1 - Basic Linux Commands
 
 ### Part 1: Software Installation using Package Managers in Bash
 
