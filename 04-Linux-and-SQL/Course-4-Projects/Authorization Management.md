@@ -1,3 +1,4 @@
+
 # Linux File and Directory Permissions Management
 
 ## Project Description
@@ -12,17 +13,19 @@ To view the contents and existing permissions of the `/home/analyst/projects` di
 
 ```bash
 ls -la
-```
+````
+
+![Initial file and directory permissions](Picture1.png)
 
 The `-l` option displays detailed information such as permissions, ownership, and file properties, while `-a` also shows hidden files.
 
 The directory contained items such as:
 
-- **`drafts/`** — Directory
-- **`.project_x.txt`** — Hidden file
-- **`project_k.txt`**
-- **`project_t.txt`**
-- Other project-related documents
+* **`drafts/`** — Directory
+* **`.project_x.txt`** — Hidden file
+* **`project_k.txt`**
+* **`project_t.txt`**
+* Other project-related documents
 
 The command successfully displayed both regular and hidden files along with their permission details.
 
@@ -36,19 +39,19 @@ A Linux permission string contains 10 characters:
 
 These characters can be understood as follows:
 
-| Characters | Meaning |
-|---|---|
-| 1st | File type: `d` for directory, `-` for regular file |
-| 2nd–4th | User/owner permissions |
-| 5th–7th | Group permissions |
-| 8th–10th | Permissions for other users |
+| Characters | Meaning                                            |
+| ---------- | -------------------------------------------------- |
+| 1st        | File type: `d` for directory, `-` for regular file |
+| 2nd–4th    | User/owner permissions                             |
+| 5th–7th    | Group permissions                                  |
+| 8th–10th   | Permissions for other users                        |
 
 The three permission groups use:
 
-- **`r`** — Read
-- **`w`** — Write
-- **`x`** — Execute
-- **`-`** — Permission is not granted
+* **`r`** — Read
+* **`w`** — Write
+* **`x`** — Execute
+* **`-`** — Permission is not granted
 
 For example:
 
@@ -70,8 +73,8 @@ chmod o-w project_k.txt
 
 Here:
 
-- `o` refers to other users.
-- `-w` removes write permission.
+* `o` refers to other users.
+* `-w` removes write permission.
 
 I then verified the change with:
 
@@ -80,6 +83,8 @@ ls -l project_k.txt
 ```
 
 The final permission group for other users showed that write access had been removed.
+
+![Removing write permission from project\_k.txt](Picture2.png)
 
 ## Changing Permissions on a Hidden File
 
@@ -93,9 +98,9 @@ chmod u=r,g=r,o= .project_x.txt
 
 This means:
 
-- `u=r` — Owner can read.
-- `g=r` — Group can read.
-- `o=` — Other users receive no permissions.
+* `u=r` — Owner can read.
+* `g=r` — Group can read.
+* `o=` — Other users receive no permissions.
 
 I verified the result with:
 
@@ -104,6 +109,8 @@ ls -la .project_x.txt
 ```
 
 The resulting permission string reflected the required access restrictions.
+
+![Updating permissions of the hidden file](Picture3.png)
 
 ## Changing Directory Permissions
 
@@ -124,6 +131,8 @@ ls -ld drafts
 ```
 
 This allowed me to confirm that the group's execute permission had been removed.
+
+![Removing group execute permission from drafts](Picture4.png)
 
 ## Summary
 
