@@ -1,4 +1,4 @@
-# Vyas Jaiswal | Cybersecurity Portfolio
+# Vyas Jaiswal | Google Cybersecurity Course Portfolio
 
 > **Professional Summary**
 > Driven by a lifelong passion for analytical puzzle-solving and reverse engineering, I approach cybersecurity with a detective's mindset—connecting digital clues to uncover root causes and solve complex security problems. My early curiosity with building web environments made me realize how critical asset protection is in modern applications. I excel at deconstructing processes to understand how systems operate, fail, and defend themselves. Currently mastering core security tools through the Google Cybersecurity Professional Certificate, my goal is to protect critical digital infrastructure so organizations and users can operate with complete trust and peace of mind.
