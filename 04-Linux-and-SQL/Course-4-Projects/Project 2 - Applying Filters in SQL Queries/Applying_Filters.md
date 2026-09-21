@@ -12,7 +12,7 @@ In this project, I used SQL queries to investigate login attempts and identify e
 
 A possible security incident occurred after business hours, which are considered to be after **18:00**. I needed to find all login attempts made after this time that were unsuccessful so they could be investigated further.
 
-[IMAGE 1]
+![Initial file and directory permissions](Picture1.png)
 
 ```sql
 SELECT *
@@ -35,7 +35,7 @@ This helps narrow down the login records and makes it easier to identify potenti
 
 A suspicious event was reported on **2022-05-09**. To investigate it, I needed to check login activity from both **2022-05-09** and the previous day, **2022-05-08**.
 
-[IMAGE 2]
+![Initial file and directory permissions](Picture2.png)
 
 ```sql
 SELECT *
@@ -58,7 +58,7 @@ This allows the login activity around the time of the suspicious event to be rev
 
 While reviewing the login data, I noticed that login attempts from outside Mexico needed further investigation. I used a filter to find all login attempts from countries other than Mexico.
 
-[IMAGE 3]
+![Initial file and directory permissions](Picture3.png)
 
 ```sql
 SELECT *
@@ -80,7 +80,7 @@ I used `LIKE 'MEX%'` because the dataset can represent Mexico as either `MEX` or
 
 My team needed to update computers belonging to employees in the **Marketing department** who work in the **East building**. I used SQL filters to identify the relevant employees.
 
-[IMAGE 4]
+![Initial file and directory permissions](Picture4.png)
 
 ```sql
 SELECT *
@@ -101,7 +101,7 @@ This query returns employees who are in the Marketing department and work in the
 
 Employees in the **Finance** and **Sales** departments also needed security updates. Since the update applied to employees from either department, I used the `OR` operator.
 
-[IMAGE 5]
+![Initial file and directory permissions](Picture5.png)
 
 ```sql
 SELECT *
@@ -124,7 +124,7 @@ Using `AND` here would not work as intended because one employee cannot normally
 
 Finally, my team needed to apply another security update to employees who were **not** part of the Information Technology department. I used the `NOT` operator to exclude IT employees.
 
-[IMAGE 6]
+![Initial file and directory permissions](Picture6.png)
 
 ```sql
 SELECT *
