@@ -6,7 +6,7 @@
 ---
 
 ## 📬 Connect with Me
-* **LinkedIn:** [www.linkedin.com/in/vyas-jaiswal-036873422]
+* **LinkedIn:** [[www.linkedin.com/in/vyas-jaiswal-036873422]](https://www.linkedin.com/in/vyas-jaiswal-036873422])
 * **Email:** [vyasjaiswalc7@gmail.com]
 
 ---
@@ -16,7 +16,7 @@
   * **Course 1: Foundations of Cybersecurity** — Completed ([View Summary](./01-foundations/foundations-summary.md))
   * **Course 2: Play It Safe: Manage Security Risks** — Completed ([View Summary & Project](./02-risk-management/Course-2-summary.md))
   * **Course 3: Connect and Protect: Networks and Network Security** — Completed ([View Summary & Project](./03-network-and-network-security/summary.md))
-  * **Course 4: Tools of the Trade: Linux and SQL** — In Progress ⏳
+  * **Course 4: Tools of the Trade: Linux and SQL** — Completed ([View Summary & Project](./04-Linux-and-SQL/summary.md))
 
 ---
 
@@ -37,3 +37,17 @@
     * **[Wireshark TCP Log Analysis (SYN Flood Investigation)](./03-network-and-network-security/Course-3-Activity/Activity2-Trafic%20Network%20Analysis/Wireshark.md)**
     * **[DNS Traffic & Website Redirect Analysis](./03-network-and-network-security/Course-3-Activity/Activity3-TCPDUMP%20extra/WebsiteRedirect.md)**
     * **[Network Hardening & Vulnerability Assessment](./03-network-and-network-security/Course-3-Activity/Activity4-NetworkHardening/NetworkHardening.md)**
+
+* **[Course 4: Tools of the Trade — Linux and SQL](./04-Linux-and-SQL/summary.md)**
+  * Hands-on work with Linux fundamentals (filesystem hierarchy, permissions, sudo-based authorization) and SQL querying (filtering, wildcards, joins, and aggregate functions) — the two core tools used across nearly every cybersecurity role.
+  * **Featured Projects:**
+    * **[Authorization Management](./04-Linux-and-SQL/Course-4-Projects/Project%201%20-%20Authorization%20Management/Authorization%20Management.md)** — Investigated and resolved a Linux permissions misconfiguration, applying least-privilege principles to restrict unauthorized file access.
+    * **[Applying Filters](./04-Linux-and-SQL/Course-4-Projects/Project%202%20-%20Applying%20Filters/Applying_Filters.md)** — Applied SQL filtering techniques to isolate and analyze relevant records within a sample database.
+  * **Activities:**
+    * **[Activity 1 - Linux Basics](./04-Linux-and-SQL/Course-4-Activities/Activity%201%20-%20Linux%20Basics/Basic%20Linux.md)**
+    * **[Activity 2 - Linux FHS](./04-Linux-and-SQL/Course-4-Activities/Activity%202%20-%20Linux%20FHS/Activity2%20-%20Linux%20FHS.md)**
+    * **[Activity 3 - Linux Sudo](./04-Linux-and-SQL/Course-4-Activities/Activity%203%20-%20Linux%20Sudo/Activity%203%20-%20Linux%20Sudo.md)**
+    * **[Activity 4 - Filter SQL Query](./04-Linux-and-SQL/Course-4-Activities/Activity%204%20-%20Filter%20SQL%20query/Query%20Filter.md)**
+    * **[Activity 5 - More Filters 1](./04-Linux-and-SQL/Course-4-Activities/Activity%205%20-%20More%20FIlters%201/More%20Filters%201.md)**
+    * **[Activity 6 - More Filters 2](./04-Linux-and-SQL/Course-4-Activities/Activity%206%20-%20More%20FIlters%202/More%20Filters%202.md)**
+    * **[Activity 7 - Joining Tables](./04-Linux-and-SQL/Course-4-Activities/Activity%207%20-%20Joining%20Tables/Join%20Tables%20in%20SQL.md)**
