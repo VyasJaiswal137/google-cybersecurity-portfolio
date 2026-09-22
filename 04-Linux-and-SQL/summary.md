@@ -1,7 +1,7 @@
 # Course 4 Summary: Tools of the Trade — Linux and SQL
 
 <p align="center">
-  <img src="./course-4-cert.png" alt="Google Cybersecurity Course 4 Certificate" width="700">
+  <img src="./course-4-cert-1.png" alt="Google Cybersecurity Course 4 Certificate" width="700">
 </p>
 
 This document pulls together the key ideas, commands, and query techniques covered in Course 4 of the Google Cybersecurity Certificate. The course is built around the two tools that show up in almost every security role, day in and day out: the Linux command line and SQL. Where Course 3 was about understanding *how* networks move data and get attacked, Course 4 is about giving you the hands-on tools to actually investigate that data once it's in front of you.
