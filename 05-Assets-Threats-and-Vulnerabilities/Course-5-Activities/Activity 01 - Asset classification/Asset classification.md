@@ -68,23 +68,6 @@ Comparing the completed inventory to the exemplar shows several strengths:
 
 ---
 
-## Where Improvement Is Needed
-
-The comparison also highlights areas for growth:
-
-- **Scope could be wider.** The completed inventory left out several devices that appear in the exemplar, such as the network router, external hard drive, and portable game console. A stronger inventory asks whether each device connects to the network and includes it when the answer is yes.
-- **Sensitivity ratings could be more consistent.** Some classifications appeared to be guesses rather than conclusions based on impact. A better approach asks:
-  1. What happens if the asset is disclosed, altered, or destroyed?
-  2. Who needs access to the asset, and who should be blocked?
-- **Classification categories should be used more clearly.** The exemplar uses a clean mapping:
-  - Restricted → need-to-know
-  - Confidential → limited to specific users
-  - Internal-only → users on-premises
-  - Public → anyone
-- **Owner and location need more attention.** For shared devices, such as a friend’s phone, it matters whether the device is on-premises, off-premises, or both. That detail changes the sensitivity level.
-
----
-
 ## Important Concepts Learned
 
 ### 1. Asset inventory
