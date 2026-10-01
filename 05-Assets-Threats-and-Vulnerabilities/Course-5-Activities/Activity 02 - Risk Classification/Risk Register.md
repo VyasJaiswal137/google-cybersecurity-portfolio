@@ -88,7 +88,7 @@ These environmental details influence both the likelihood and severity of each r
 | 1 (tie) | Financial records leak | 9 | Critical |
 | 3 | Funds (business email compromise) | 6 | High |
 | 4 | Supply chain disruption | 4 | Moderate |
-| 5 | Theft (safe left unlocked) | 3 | Moderate |
+| 5 | Theft  | 3 | Moderate |
 
 ### Recommended Focus
 
