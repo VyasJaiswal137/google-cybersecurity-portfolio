@@ -23,6 +23,7 @@ Output:
 ```text
 Q1.encrypted  README.txt  caesar
 ```
+![Initial file and directory permissions](Task1.png)
 
 Two files and one subdirectory are present. The `README.txt` file holds the instructions needed to proceed, and it can be read with the `cat` command.
 
@@ -60,6 +61,7 @@ Output:
 ```text
 .  ..  .leftShift3
 ```
+![Initial file and directory permissions](Task2.png)
 
 The hidden file is named `.leftShift3`. Reading it with `cat` reveals scrambled text, which indicates a Caesar cipher. The cipher works by shifting each alphabet character a fixed number of positions — in this case, three letters to the left, so `d` stands for `a` and `e` stands for `b`.
 
@@ -96,6 +98,7 @@ With the Caesar cipher solved, the command revealed in `.leftShift3` is used to 
 ```bash
 openssl aes-256-cbc -pbkdf2 -a -d -in Q1.encrypted -out Q1.recovered -k ettubrute
 ```
+![Initial file and directory permissions](Task3.png)
 
 The syntax breaks down as follows:
 
