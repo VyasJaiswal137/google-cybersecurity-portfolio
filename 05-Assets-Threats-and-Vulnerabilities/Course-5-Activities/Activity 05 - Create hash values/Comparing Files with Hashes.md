@@ -21,6 +21,7 @@ Output:
 ```text
 file1.txt  file2.txt
 ```
+![Initial directory and permissions](Task1A.png)
 
 Both files are then displayed using `cat`. If a command is entered incorrectly and fails to return to the prompt, `CTRL+C` can be used to stop the process and force the shell back to the command line.
 
@@ -51,6 +52,8 @@ sha256sum file2.txt
 
 Output:
 
+![Initial directory and permissions](Task1B.png)
+
 ```text
 analyst@4fb6d613b6b0:~$ sha256sum file1.txt
 131f95c51cc819465fa1797f6ccacf9d494aaaff46fa3eac73ae63ffbdfd8267  file1.txt
@@ -79,6 +82,7 @@ Two hashes now exist in separate files — `file1hash` and `file2hash` — and c
 cat file1hash
 cat file2hash
 ```
+![Initial directory and permissions](Task2A.png)
 
 The output confirms that the hashes written to the two files are completely different, even though the file contents previously appeared identical.
 
@@ -89,6 +93,8 @@ cmp file1hash file2hash
 ```
 
 Output:
+
+![Initial directory and permissions](Task2B.png)
 
 ```text
 analyst@4fb6d613b6b0:~$ cmp file1hash file2hash
